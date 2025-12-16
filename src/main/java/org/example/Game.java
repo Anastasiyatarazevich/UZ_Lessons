@@ -28,20 +28,38 @@ public class Game {
         String answer = sc.nextLine();
         System.out.println("Ваш ответ:\t" + answer);
 
-        if (answer.equals("Да")) {
-            System.out.println(gamingField);
-            System.out.println("Хорошей игры!");
-        } else if (answer.equals("дА")){
-            System.out.println(gamingField);
-            System.out.println("Хорошей игры!");
-        } else if (answer.equals("ДА")){
-            System.out.println(gamingField);
-            System.out.println("Хорошей игры!");
-        } else if (answer.equals("да")){
-            System.out.println(gamingField);
-            System.out.println("Хорошей игры!");
-        } else {
-            System.out.println("Ты не хочешь с нами играть:(");
+        switch (answer) {
+            case "ДА" -> {
+                System.out.println("Выбери сложность игры(от 1 до 5):");
+                int difficultGame = sc.nextInt();
+                System.out.println("Выбранная сложность:\t" + difficultGame);
+//                System.out.println("Сколько жизней будет у персонажа?");
+//            personLive = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
+
+                System.out.println(gamingField);
+                System.out.println("Количество жизней:\t" + personLive + "\n");
+                System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку);" +
+                        "\nКоординаты персонажа - (x: " + personX + ", y: " + personY + "))");
+                int x = sc.nextInt();
+                int y = sc.nextInt();
+                System.out.println(x + ", " + y);
+
+                // проверка
+                if (x != personX && y != personY) {
+                    System.out.println("Неккоректный ход");
+                } else if (Math.abs(x - personX) == 1 || Math.abs(y - personY) == 1) {
+                    personX = x;
+                    personY = y;
+                    step++;
+                    System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY +
+                            "\nХод номер: " + step);
+                } else {
+                    System.out.println("Координаты не изменены");
+                }
+            }
+            case "НЕТ" -> System.out.println("Жаль, приходи еще!");
+            default -> System.out.println("Данные введены неккоректно");
         }
+
     }
 }
