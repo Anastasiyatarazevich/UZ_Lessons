@@ -81,16 +81,33 @@ public class Lesson6_Practice {
 //            i++;
 //        }
 
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//
+//        long factorial = 1;
+//        // n == 5
+//        for (int i = 1; i <= n; i++) { //1 2 3 4 5
+//            factorial *= i; // 1*2*3*4*5
+//        }
+//
+//        System.out.println(n + "! = " + factorial);
 
-        long factorial = 1;
-        // n == 5
-        for (int i = 1; i <= n; i++) { //1 2 3 4 5
-            factorial *= i; // 1*2*3*4*5
+
+        // Задача 1 - Вывод квадратов чисел
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        for (int num1 = 1; num1 <= N; num1++) {
+            int res1 = num1 * num1;
+            System.out.println(num1 + "²=" + res1);
         }
 
-        System.out.println(n + "! = " + factorial);
+        // Задача 2 - Обратный отсчёт
+
+        int n = sc.nextInt();
+        for (int num2 = n; num2 >= 1; num2-=2) {// num2 = num2 - 2
+            System.out.println(num2);
+        }
+        System.out.println("Пуск!");
     }
 }
 //n! = 1 * 2 * 3 *...* n
