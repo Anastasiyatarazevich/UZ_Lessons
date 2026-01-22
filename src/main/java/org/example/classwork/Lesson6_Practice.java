@@ -1,6 +1,5 @@
-package org.example;
+package org.example.classwork;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Lesson6_Practice {

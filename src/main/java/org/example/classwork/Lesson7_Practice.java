@@ -1,6 +1,5 @@
-package org.example;
+package org.example.classwork;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Lesson7_Practice {
