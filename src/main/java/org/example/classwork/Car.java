@@ -26,22 +26,22 @@ public class Car {
     }
 }
 
-class Test{
-    public static void main(String[] args) {
-        Car car1 = new Car(100, "Kia", "White");// создаем объект машины
-//        car1.beep();
-//        car1.move();
-
-        System.out.println(car1.brand);
-        System.out.println(car1.speed);
-        System.out.println(car1.wheels);
-        System.out.println(car1.color);
-
-        Car car2 = new Car(180, "Geely", "Black");
-
-        System.out.println(car2.brand);
-        System.out.println(car2.speed);
-        System.out.println(car2.wheels);
-        System.out.println(car2.color);
-    }
-}
+//class Test{
+//    public static void main(String[] args) {
+//        Car car1 = new Car(100, "Kia", "White");// создаем объект машины
+////        car1.beep();
+////        car1.move();
+//
+//        System.out.println(car1.brand);
+//        System.out.println(car1.speed);
+//        System.out.println(car1.wheels);
+//        System.out.println(car1.color);
+//
+//        Car car2 = new Car(180, "Geely", "Black");
+//
+//        System.out.println(car2.brand);
+//        System.out.println(car2.speed);
+//        System.out.println(car2.wheels);
+//        System.out.println(car2.color);
+//    }
+//}
